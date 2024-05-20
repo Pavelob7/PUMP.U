@@ -1,0 +1,13 @@
+/* styles/Button.module.scss */
+.btn {
+  padding: 10px 20px;
+  background-color: #0070f3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #005bb5;
+}
