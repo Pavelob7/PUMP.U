@@ -1,10 +1,17 @@
-// Компонент формы
-import React from 'react';
+// components/Form.tsx
+"use client";  // Указываем, что компонент является клиентским
 
-const Form: React.FC = () => {
+
+import React, { ReactNode } from 'react';
+
+type FormProps = {
+    children: ReactNode;
+};
+
+const Form: React.FC<FormProps> = ({ children }) => {
     return (
         <form className="form">
-            children
+            {children}
         </form>
     );
 };

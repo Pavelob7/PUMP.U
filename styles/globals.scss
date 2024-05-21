@@ -1,4 +1,10 @@
 // styles/globals.scss
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
 body {
   font-family: Arial, sans-serif;
 }
@@ -15,9 +21,14 @@ nav ul li {
 
 a {
   text-decoration: none;
-  color: blue;
+  color: #2ab12c;
 }
 
 a:hover {
   text-decoration: underline;
+}
+
+.mainHeader {
+  background-color: bisque;
+  padding: 20px;
 }

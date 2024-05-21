@@ -1,20 +1,23 @@
 // app/register/page.tsx
+
 import React from 'react';
 import Form from '../components/Form';
 
 const Register: React.FC = () => {
-    const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
-        console.log('Form submitted');
-        // Ваша логика обработки формы
-    };
-
     return (
         <div>
-            <h2>Главная страница</h2>
-            <Form onSubmit={handleSubmit}>
-                {/* Ваши поля формы здесь */}
-                <button type="submit">Отправить</button>
+            <h2>Страница регистрации</h2>
+            <Form>
+                {/* Добавим несколько инпутов */}
+                <div>
+                    <label htmlFor="username">Имя пользователя:</label>
+                    <input type="text" id="username" name="username" />
+                </div>
+                <div>
+                    <label htmlFor="password">Пароль:</label>
+                    <input type="password" id="password" name="password" />
+                </div>
+                <button type="submit">Зарегистрироваться</button>
             </Form>
         </div>
     );
