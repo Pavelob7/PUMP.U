@@ -1,9 +1,10 @@
 // app/page.tsx
+"use client"; // Указываем, что компонент является клиентским
 
 import React from 'react';
 import Link from 'next/link';
 import Form from './components/Form';
-import Button from './components/Button'; // Импортируем компонент кнопки
+import Button from './components/Button';
 
 const Home: React.FC = () => {
     const handleClick = () => {
@@ -23,8 +24,7 @@ const Home: React.FC = () => {
                     <label htmlFor="password">Пароль:</label>
                     <input type="password" id="password" name="password" />
                 </div>
-                {/* Передаем функцию handleClick в компонент кнопки */}
-                <Button onClick={handleClick} type="submit">Отправить</Button>
+                <Button onClick={handleClick}>Отправить</Button>
             </Form>
             <Link href="/register">Перейти к регистрации</Link>
         </div>
