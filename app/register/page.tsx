@@ -3,11 +3,11 @@
 
 import React from 'react';
 import Form from '../components/Form';
-import Button from '../components/Button';
+import SkipButton from '../components/SkipButton';
 
 const Register: React.FC = () => {
     const handleClick = () => {
-        console.log('Button clicked');
+        console.log('SkipButton clicked');
         // Ваша логика обработки клика на кнопке
     };
 
@@ -27,7 +27,7 @@ const Register: React.FC = () => {
                     <label htmlFor="password">Пароль:</label>
                     <input type="password" id="password" name="password" />
                 </div>
-                <Button onClick={handleClick}>Зарегистрироваться</Button>
+                <SkipButton onClick={handleClick}>Зарегистрироваться</SkipButton>
             </Form>
         </div>
     );

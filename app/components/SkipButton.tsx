@@ -1,4 +1,4 @@
-// components/Button.tsx
+// components/SkipButton.tsx
 "use client"; // Указываем, что компонент является клиентским
 
 import React from 'react';
@@ -9,7 +9,7 @@ type ButtonProps = {
     children: React.ReactNode;
 };
 
-const Button: React.FC<ButtonProps> = ({ onClick, children }) => {
+const SkipButton: React.FC<ButtonProps> = ({ onClick, children }) => {
     return (
         <button onClick={onClick} className={styles.btn}>
             {children}
@@ -17,4 +17,4 @@ const Button: React.FC<ButtonProps> = ({ onClick, children }) => {
     );
 };
 
-export default Button;
+export default SkipButton;

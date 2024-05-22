@@ -4,11 +4,11 @@
 import React from 'react';
 import Link from 'next/link';
 import Form from './components/Form';
-import Button from './components/Button';
+import SkipButton from './components/SkipButton';
 
 const Home: React.FC = () => {
     const handleClick = () => {
-        console.log('Button clicked');
+        console.log('SkipButton clicked');
         // Ваша логика обработки клика на кнопке
     };
 
@@ -24,7 +24,7 @@ const Home: React.FC = () => {
                     <label htmlFor="password">Пароль:</label>
                     <input type="password" id="password" name="password" />
                 </div>
-                <Button onClick={handleClick}>Отправить</Button>
+                <SkipButton onClick={handleClick}>Отправить</SkipButton>
             </Form>
             <Link href="/register">Перейти к регистрации</Link>
         </div>
