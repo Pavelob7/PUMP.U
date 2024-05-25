@@ -1,0 +1,18 @@
+/* styles/SkipButton.module.scss */
+
+$base-color: #FFFFFF;
+$text-color: #FFFFFF;
+
+.btn {
+  padding: 15px 11px 11px 23px;
+  border: 1px solid $base-color;
+  border-radius: 23px;
+  color: $text-color;
+  cursor: pointer;
+
+  &:hover {
+    transition: 0.5s;
+    opacity: 0.5;
+  }
+}
+

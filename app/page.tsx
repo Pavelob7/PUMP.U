@@ -4,7 +4,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Form from './components/Form';
-import SkipButton from './components/SkipButton';
+import SkipButton from './components/buttons/SkipButton';
 
 const Home: React.FC = () => {
     const handleClick = () => {

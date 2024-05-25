@@ -1,7 +1,7 @@
 // app/layout.tsx
 import React from 'react';
 import Link from 'next/link';
-import '../styles/globals.scss';
+import '../public/styles/globals.scss';
 
 const RootLayout: React.FC = ({children}) => {
     return (

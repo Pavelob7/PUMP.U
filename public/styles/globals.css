@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: #2ab12c;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.mainHeader {
+  background-color: bisque;
+  padding: 20px;
+}
+
+/*# sourceMappingURL=globals.css.map */

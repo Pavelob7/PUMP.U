@@ -3,7 +3,7 @@
 
 import React from 'react';
 import Form from '../components/Form';
-import SkipButton from '../components/SkipButton';
+import SkipButton from '../components/buttons/SkipButton';
 
 const Register: React.FC = () => {
     const handleClick = () => {

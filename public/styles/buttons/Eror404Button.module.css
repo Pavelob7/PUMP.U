@@ -1,0 +1,14 @@
+/* styles/SkipButton.module.scss */
+.btn {
+  padding: 15px 11px 11px 23px;
+  border: 1px solid #FFFFFF;
+  border-radius: 23px;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+.btn:hover {
+  transition: 0.5s;
+  opacity: 0.5;
+}
+
+/*# sourceMappingURL=Eror404Button.module.css.map */

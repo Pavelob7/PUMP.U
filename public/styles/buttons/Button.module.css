@@ -1,0 +1,18 @@
+/* styles/SkipButton.module.scss */
+.btn {
+  padding: 13px 26px;
+  background-color: #FFFFFF;
+  color: #000000;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+.btn.communicate {
+  color: #ffb45b;
+}
+.btn:hover {
+  transition: 0.5s;
+  opacity: 0.5;
+}
+
+/*# sourceMappingURL=Button.module.css.map */

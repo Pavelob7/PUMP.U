@@ -1,0 +1,15 @@
+/* styles/SkipButton.module.scss */
+.btn {
+  padding: 13px 12px;
+  background-color: #FFFFFF;
+  color: #000000;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+.btn:hover {
+  transition: 0.5s;
+  opacity: 0.5;
+}
+
+/*# sourceMappingURL=PhoneButton.module.css.map */

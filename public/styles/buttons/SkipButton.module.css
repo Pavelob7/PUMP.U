@@ -1,0 +1,15 @@
+/* styles/SkipButton.module.scss */
+.btn {
+  padding: 12px 9px 9px 9px;
+  background-color: #FFB45B;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.btn:hover {
+  transition: 0.5s;
+  background-color: #ff9d28;
+}
+
+/*# sourceMappingURL=SkipButton.module.css.map */

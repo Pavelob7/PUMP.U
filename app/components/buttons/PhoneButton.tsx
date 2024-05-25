@@ -2,7 +2,7 @@
 "use client"; // Указываем, что компонент является клиентским
 
 import React from 'react';
-import styles from '../../styles/Button.module.scss'; // Скорректированный путь
+import styles from '../../../public/styles/buttons/PhoneButton.module.scss'; // Скорректированный путь
 
 type ButtonProps = {
     onClick: () => void;
