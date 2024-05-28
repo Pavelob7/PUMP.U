@@ -1,6 +1,15 @@
+@font-face {
+  font-family: "Raleway", sans-serif;
+}
+/* breakpoints */
 * {
   margin: 0;
   padding: 0;
+  font-weight: normal;
+}
+
+body {
+  background-color: #3a3c41;
 }
 
 nav ul {

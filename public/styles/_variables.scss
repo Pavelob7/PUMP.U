@@ -1,4 +1,4 @@
-// styles/variables.scss
+// styles/_variables.scss
 
 // FONTS //
 $font-family: "Raleway", sans-serif;
@@ -9,48 +9,18 @@ $font4: "Actay", sans-serif;
 
 
 //  basic colors //
-
-$basic-col1: (
-        color: #4d4d4d,
-);
-
-$basic-col2: (
-        color: #373737,
-);
-
-$basic-col3: (
-        color: #fff,
-);
-
-$basic-col4: (
-        color: #ffb45b,
-);
-
-$basic-col5: (
-        color: #3a3c41,
-);
+$basic-col1: #4d4d4d;
+$basic-col2: #373737;
+$basic-col3: #fff;
+$basic-col4: #ffb45b;
+$basic-col5: #3a3c41;
 
 // additional colors //
-
-$additional-col1: (
-        color: #00b2ff,
-);
-
-$additional-col2: (
-        color: #1400f7,
-);
-
-$additional-col3: (
-        color: #FF6666,
-);
-
-$additional-col4: (
-        color: #B2FF97,
-);
-
-$additional-col5: (
-        color: #FCFF80,
-);
+$additional-col1: #00b2ff;
+$additional-col2: #1400f7;
+$additional-col3: #FF6666;
+$additional-col4: #B2FF97;
+$additional-col5: #FCFF80;
 
 // HEADINGS //
 $heading-1: (
@@ -100,44 +70,14 @@ $calendar-text-bold: (
 );
 
 // balance wheel colors
-
-$balance-wh1: (
-        background: #fff,
-);
-
-$balance-wh2: (
-        background: #63dfc5,
-);
-
-$balance-wh3: (
-        background: #7fd980,
-);
-
-$balance-wh4: (
-        background: #c0d727,
-);
-
-$balance-wh5: (
-        background: #f4bc20,
-);
-
-$balance-wh6: (
-        background: #ec865a,
-);
-
-$balance-wh7: (
-        background: #e9769a,
-);
-
-$balance-wh8: (
-        background: #aa96ee,
-);
-
-$balance-wh9: (
-        background: #6ecbec,
-);
-
-$balance-wh10: (
-        background: #00ff19,
-);
+$balance-wh1: #fff;
+$balance-wh2: #63dfc5;
+$balance-wh3: #7fd980;
+$balance-wh4: #c0d727;
+$balance-wh5: #f4bc20;
+$balance-wh6: #ec865a;
+$balance-wh7: #e9769a;
+$balance-wh8: #aa96ee;
+$balance-wh9: #6ecbec;
+$balance-wh10: #00ff19;
 

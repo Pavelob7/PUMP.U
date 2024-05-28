@@ -1,11 +1,30 @@
-// Импорт переменных
-@import 'variables.scss';
-
 // styles/globals.scss
+// Импорт переменных
+@import 'variables';
+@import 'breakpoints';
+
+@font-face {
+  font-family: $font-family;
+}
+
+/* breakpoints */
+
+@include breakpoints((
+        xlarge: (1281px, 1680px),
+        large: (981px, 1280px),
+        medium: (737px, 980px),
+        small: (null, 736px)
+));
+
 
 * {
   margin: 0;
   padding: 0;
+  font-weight: normal;
+}
+
+body {
+  background-color: $basic-col5;
 }
 
 nav ul {
