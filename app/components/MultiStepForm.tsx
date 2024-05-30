@@ -1,15 +1,19 @@
 // components/MultiStepForm.tsx
 import React, { useState } from 'react';
-import MultiFormStep1 from './MultiFormStep1';
-import MultiFormStep2 from './MultiFormStep2';
-import MultiFormStep3 from './MultiFormStep3';
+import Step1 from './MultiFormStep1';
+import Step2 from './MultiFormStep2';
+import Step3 from './MultiFormStep3';
 
 const MultiStepForm: React.FC = () => {
     const [currentStep, setCurrentStep] = useState(1);
     const [formData, setFormData] = useState({
         username: '',
         email: '',
-        password: ''
+        password: '',
+        name: '',
+        birthdate: '',
+        phone: '',
+        gender: ''
     });
 
     const nextStep = () => {
@@ -27,13 +31,13 @@ const MultiStepForm: React.FC = () => {
 
     switch (currentStep) {
         case 1:
-            return <MultiFormStep1 formData={formData} setFormData={setFormData} nextStep={nextStep} />;
+            return <Step1 formData={formData} setFormData={setFormData} nextStep={nextStep} />;
         case 2:
-            return <MultiFormStep2 formData={formData} setFormData={setFormData} nextStep={nextStep} prevStep={prevStep} />;
+            return <Step2 formData={formData} setFormData={setFormData} nextStep={nextStep} prevStep={prevStep} />;
         case 3:
-            return <MultiFormStep3 formData={formData} setFormData={setFormData} prevStep={prevStep} handleSubmit={handleSubmit} />;
+            return <Step3 formData={formData} setFormData={setFormData} prevStep={prevStep} handleSubmit={handleSubmit} />;
         default:
-            return <MultiFormStep1 formData={formData} setFormData={setFormData} nextStep={nextStep} />;
+            return <Step1 formData={formData} setFormData={setFormData} nextStep={nextStep} />;
     }
 };
 
