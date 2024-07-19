@@ -1,4 +1,3 @@
-// components/Step1.tsx
 import React from 'react';
 import styles from '../../public/styles/Form.module.scss';
 
@@ -12,7 +11,7 @@ interface StepProps {
         phone: string;
         gender: string;
     };
-    setFormData: (data: {
+    setFormData: React.Dispatch<React.SetStateAction<{
         username: string;
         email: string;
         password: string;
@@ -20,7 +19,7 @@ interface StepProps {
         birthdate: string;
         phone: string;
         gender: string;
-    }) => void;
+    }>>;
     nextStep: () => void;
 }
 

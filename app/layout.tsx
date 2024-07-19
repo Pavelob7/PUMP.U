@@ -1,9 +1,13 @@
-// app/layout.tsx
 import React from 'react';
 import Link from 'next/link';
 import '../public/styles/globals.scss';
 
-const RootLayout: React.FC = ({children}) => {
+// Определение типа для пропсов, включая children
+interface RootLayoutProps {
+    children: React.ReactNode;
+}
+
+const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
     return (
         <html lang="en">
         <head>

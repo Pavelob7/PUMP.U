@@ -1,9 +1,24 @@
-// components/MultiFormStep3.tsx
 import React from 'react';
 
 interface StepProps {
-    formData: { username: string; email: string; password: string };
-    setFormData: (data: { username: string; email: string; password: string }) => void;
+    formData: {
+        username: string;
+        email: string;
+        password: string;
+        name: string;
+        birthdate: string;
+        phone: string;
+        gender: string;
+    };
+    setFormData: React.Dispatch<React.SetStateAction<{
+        username: string;
+        email: string;
+        password: string;
+        name: string;
+        birthdate: string;
+        phone: string;
+        gender: string;
+    }>>;
     prevStep: () => void;
     handleSubmit: () => void;
 }
@@ -17,8 +32,8 @@ const MultiFormStep3: React.FC<StepProps> = ({ formData, setFormData, prevStep, 
         <div>
             <h2>Step 3</h2>
             <label>
-                Пароль:
-                <input type="password" name="password" value={formData.password} onChange={handleChange} />
+                Пол:
+                <input type="text" name="gender" value={formData.gender} onChange={handleChange} />
             </label>
             <button onClick={prevStep}>Назад</button>
             <button onClick={handleSubmit}>Завершить</button>

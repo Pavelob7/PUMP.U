@@ -1,12 +1,22 @@
-// components/MultiStepForm.tsx
 import React, { useState } from 'react';
 import Step1 from './MultiFormStep1';
 import Step2 from './MultiFormStep2';
 import Step3 from './MultiFormStep3';
 
+// Определение типа данных формы
+interface FormData {
+    username: string;
+    email: string;
+    password: string;
+    name: string;
+    birthdate: string;
+    phone: string;
+    gender: string;
+}
+
 const MultiStepForm: React.FC = () => {
     const [currentStep, setCurrentStep] = useState(1);
-    const [formData, setFormData] = useState({
+    const [formData, setFormData] = useState<FormData>({
         username: '',
         email: '',
         password: '',
