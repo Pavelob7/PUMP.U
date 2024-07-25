@@ -37,32 +37,80 @@ const Step1: React.FC<StepProps> = ({ formData, setFormData, nextStep }) => {
             <h2>Шаг 1</h2>
             <label>
                 Email
-                <input type="email" name="email" value={formData.email} onChange={handleChange} />
+                <input
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    className={styles.inputField}
+                />
             </label>
             <label>
                 Пароль
-                <input type="password" name="password" value={formData.password} onChange={handleChange} />
+                <input
+                    type="password"
+                    name="password"
+                    value={formData.password}
+                    onChange={handleChange}
+                    className={styles.inputField}
+                />
             </label>
             <label>
                 Имя
-                <input type="text" name="name" value={formData.name} onChange={handleChange} />
+                <input
+                    type="text"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    className={styles.inputField}
+                />
             </label>
             <label>
                 Дата рождения
-                <input type="date" name="birthdate" value={formData.birthdate} onChange={handleChange} />
+                <input
+                    type="date"
+                    name="birthdate"
+                    value={formData.birthdate}
+                    onChange={handleChange}
+                    className={styles.inputField}
+                />
             </label>
             <label>
                 Телефон
-                <input type="tel" name="phone" value={formData.phone} onChange={handleChange} />
+                <input
+                    type="tel"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    className={styles.inputField}
+                />
             </label>
             <label>
                 Пол
-                <div>
-                    <input type="radio" name="gender" value="male" checked={formData.gender === 'male'} onChange={handleGenderChange} /> Мужчина
-                    <input type="radio" name="gender" value="female" checked={formData.gender === 'female'} onChange={handleGenderChange} /> Женщина
+                <div className={styles.radioContainer}>
+                    <label>
+                        <input
+                            type="radio"
+                            name="gender"
+                            value="male"
+                            checked={formData.gender === 'male'}
+                            onChange={handleGenderChange}
+                        /> Мужчина
+                    </label>
+                    <label>
+                        <input
+                            type="radio"
+                            name="gender"
+                            value="female"
+                            checked={formData.gender === 'female'}
+                            onChange={handleGenderChange}
+                        /> Женщина
+                    </label>
                 </div>
             </label>
+            <div className={styles.navigationButtons}>
             <button onClick={nextStep}>Далее</button>
+            </div>
         </div>
     );
 };
