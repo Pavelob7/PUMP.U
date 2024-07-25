@@ -83,6 +83,10 @@ const MultiFormStep2: React.FC<StepProps> = ({ formData, setFormData, nextStep, 
         }
     };
 
+    const handleRangeChange = (name: keyof FormData, value: number) => {
+        setFormData({ ...formData, [name]: value });
+    };
+
     return (
         <div className={styles.container}>
             {subStep === 1 && (
@@ -171,10 +175,19 @@ const MultiFormStep2: React.FC<StepProps> = ({ formData, setFormData, nextStep, 
                         type="range"
                         name="sleepQuality"
                         min="0"
-                        max="10"
+                        max="4"
+                        step="1"
                         value={formData.sleepQuality}
-                        onChange={handleChange}
+                        onChange={(e) => handleRangeChange('sleepQuality', parseInt(e.target.value))}
+                        className={styles.rangeSlider}
                     />
+                    <div className={styles.sliderLabels}>
+                        <span>Очень плохо</span>
+                        <span>Плохо</span>
+                        <span>Средне</span>
+                        <span>Хорошо</span>
+                        <span>Отлично</span>
+                    </div>
                     <div className={styles.navigationButtons}>
                         <button onClick={handlePrevSubStep}>Назад</button>
                         <button onClick={handleNextSubStep} disabled={isNextDisabled}>Далее</button>
@@ -190,10 +203,19 @@ const MultiFormStep2: React.FC<StepProps> = ({ formData, setFormData, nextStep, 
                         type="range"
                         name="stressLevel"
                         min="0"
-                        max="10"
+                        max="4"
+                        step="1"
                         value={formData.stressLevel}
-                        onChange={handleChange}
+                        onChange={(e) => handleRangeChange('stressLevel', parseInt(e.target.value))}
+                        className={styles.rangeSlider}
                     />
+                    <div className={styles.sliderLabels}>
+                        <span>Очень низкий</span>
+                        <span>Низкий</span>
+                        <span>Средний</span>
+                        <span>Высокий</span>
+                        <span>Очень высокий</span>
+                    </div>
                     <div className={styles.navigationButtons}>
                         <button onClick={handlePrevSubStep}>Назад</button>
                         <button onClick={handleNextSubStep} disabled={isNextDisabled}>Далее</button>

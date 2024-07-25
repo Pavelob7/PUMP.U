@@ -33,7 +33,7 @@ const Step1: React.FC<StepProps> = ({ formData, setFormData, nextStep }) => {
     };
 
     return (
-        <div className={styles['form-step']}>
+        <div className={styles.container}>
             <h2>Шаг 1</h2>
             <label>
                 Email
