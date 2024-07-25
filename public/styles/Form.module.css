@@ -37,4 +37,117 @@
   margin-right: 0.5rem;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  background: #333;
+  color: white;
+}
+.container h2 {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+}
+.container p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+.container input[type=range] {
+  width: 100%;
+  margin: 20px 0;
+}
+.container textarea {
+  width: 100%;
+  margin: 20px 0;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  background-color: #444;
+  color: white;
+}
+
+.buttonsContainer, .multiSelectContainer, .painPointsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 20px 0;
+}
+.buttonsContainer button, .multiSelectContainer button, .painPointsContainer button {
+  padding: 15px 30px;
+  border: none;
+  border-radius: 8px;
+  background-color: #666;
+  color: white;
+  cursor: pointer;
+  font-size: 1.2em;
+}
+.buttonsContainer button:hover, .multiSelectContainer button:hover, .painPointsContainer button:hover {
+  background-color: #888;
+}
+.buttonsContainer button.active, .multiSelectContainer button.active, .painPointsContainer button.active {
+  background-color: #999;
+}
+
+.optionButton {
+  padding: 70px 20px;
+  border: none;
+  border-radius: 8px;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  cursor: pointer;
+  font-size: 1.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 1px 1px 2px black;
+  position: relative;
+  overflow: hidden;
+}
+.optionButton::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+.optionButton:hover::after {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.navigationButtons {
+  display: flex;
+  gap: 15px;
+}
+.navigationButtons button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.2em;
+  transition: background 0.3s ease;
+}
+.navigationButtons button:nth-child(1), .navigationButtons button:nth-child(2) {
+  background-color: #666;
+  color: white;
+}
+.navigationButtons button:nth-child(1):hover, .navigationButtons button:nth-child(2):hover {
+  background-color: #888;
+}
+
+.skipButton {
+  background-color: orange;
+  color: white;
+  transition: background 0.3s ease;
+}
+.skipButton:hover {
+  background-color: darkorange;
+}
+
 /*# sourceMappingURL=Form.module.css.map */

@@ -1,4 +1,6 @@
 import React from 'react';
+import styles from '../../public/styles/Form.module.scss';
+
 
 interface StepProps {
     formData: {

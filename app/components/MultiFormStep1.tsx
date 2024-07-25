@@ -34,29 +34,29 @@ const Step1: React.FC<StepProps> = ({ formData, setFormData, nextStep }) => {
 
     return (
         <div className={styles['form-step']}>
-            <h2>Step 1</h2>
+            <h2>Шаг 1</h2>
             <label>
-                Логин (почта):
+                Email
                 <input type="email" name="email" value={formData.email} onChange={handleChange} />
             </label>
             <label>
-                Пароль:
+                Пароль
                 <input type="password" name="password" value={formData.password} onChange={handleChange} />
             </label>
             <label>
-                Имя:
+                Имя
                 <input type="text" name="name" value={formData.name} onChange={handleChange} />
             </label>
             <label>
-                Дата рождения:
+                Дата рождения
                 <input type="date" name="birthdate" value={formData.birthdate} onChange={handleChange} />
             </label>
             <label>
-                Телефон:
+                Телефон
                 <input type="tel" name="phone" value={formData.phone} onChange={handleChange} />
             </label>
             <label>
-                Пол:
+                Пол
                 <div>
                     <input type="radio" name="gender" value="male" checked={formData.gender === 'male'} onChange={handleGenderChange} /> Мужчина
                     <input type="radio" name="gender" value="female" checked={formData.gender === 'female'} onChange={handleGenderChange} /> Женщина
