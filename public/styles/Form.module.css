@@ -5,7 +5,6 @@
   align-items: center;
   text-align: center;
   padding: 20px;
-  background: #333;
   color: white;
 }
 .container h2 {
@@ -30,57 +29,29 @@
   color: white;
 }
 
-.buttonsContainer, .multiSelectContainer, .painPointsContainer {
+.buttonsContainer, .multiSelectContainer {
   display: flex;
   flex-direction: column;
   gap: 15px;
   margin: 20px 0;
 }
-.buttonsContainer button, .multiSelectContainer button, .painPointsContainer button {
+.buttonsContainer button, .multiSelectContainer button {
   padding: 15px 30px;
-  border: none;
-  border-radius: 8px;
-  background-color: #666;
-  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 30px;
+  color: rgba(255, 255, 255, 0.4);
   cursor: pointer;
   font-size: 1.2em;
+  background-color: transparent;
+  transition: color 0.3s ease;
 }
-.buttonsContainer button:hover, .multiSelectContainer button:hover, .painPointsContainer button:hover {
-  background-color: #888;
+.buttonsContainer button:hover, .multiSelectContainer button:hover {
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.6);
 }
-.buttonsContainer button.active, .multiSelectContainer button.active, .painPointsContainer button.active {
-  background-color: #999;
-}
-
-.optionButton {
-  padding: 70px 20px;
-  border: none;
-  border-radius: 8px;
-  background-size: cover;
-  background-position: center;
-  color: white;
-  cursor: pointer;
-  font-size: 1.5em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-shadow: 1px 1px 2px black;
-  position: relative;
-  overflow: hidden;
-}
-.optionButton::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.4);
-  border-radius: 8px;
-  transition: background 0.3s ease;
-}
-.optionButton:hover::after {
-  background: rgba(0, 0, 0, 0.6);
+.buttonsContainer button.active, .multiSelectContainer button.active {
+  border: 1px solid rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
 }
 
 .navigationButtons {
@@ -88,28 +59,35 @@
   gap: 15px;
 }
 .navigationButtons button {
-  padding: 12px 25px;
-  border: none;
-  border-radius: 8px;
+  border-radius: 25px;
   cursor: pointer;
   font-size: 1.2em;
   transition: background 0.3s ease;
 }
 .navigationButtons button:nth-child(1), .navigationButtons button:nth-child(2) {
-  background-color: #666;
-  color: white;
+  padding: 12px 25px;
+  border: none;
+  background: #fff;
+  color: #000;
 }
 .navigationButtons button:nth-child(1):hover, .navigationButtons button:nth-child(2):hover {
-  background-color: #888;
+  background: rgba(255, 255, 255, 0.7);
+}
+.navigationButtons button:nth-child(1):disabled, .navigationButtons button:nth-child(2):disabled {
+  background: rgba(255, 255, 255, 0.5);
+  cursor: auto;
 }
 
-.skipButton {
-  background-color: orange;
-  color: white;
-  transition: background 0.3s ease;
+.backBlock {
+  display: flex;
+  width: 100%;
 }
-.skipButton:hover {
-  background-color: darkorange;
+.backBlock .backButton {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
 .inputField {
@@ -127,6 +105,7 @@
   color: #999; /* Цвет плейсхолдера */
 }
 
+/*  Стили для квадратных радио-кнопок */
 .radioContainer {
   display: flex;
   gap: 10px;
