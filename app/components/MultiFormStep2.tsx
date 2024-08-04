@@ -85,12 +85,10 @@ const MultiFormStep2: React.FC<StepProps> = ({ formData, setFormData, nextStep, 
             case 7:
                 return Array.isArray(formData.celebrationMethods) && formData.celebrationMethods.length > 0;
             case 8:
-                // Убедитесь, что formData.customDiet не undefined
                 if (formData.diet === 'Свой вариант') {
                     return (formData.customDiet || '').trim() !== '';
                 }
-                // Если диета не выбрана или выбрана не "Свой вариант"
-                return formData.diet !== '';
+                return formData.diet === 'Да' || formData.diet === 'Нет' || formData.diet === 'Свой вариант';
             case 9:
                 return typeof formData.withCoach === 'string' && formData.withCoach !== '';
             default:
