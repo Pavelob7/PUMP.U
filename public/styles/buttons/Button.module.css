@@ -1,11 +1,19 @@
 /* styles/SkipButton.module.scss */
 .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 13px 26px;
+  margin: 20px 0;
   background-color: #FFFFFF;
   color: #000000;
+  line-height: 120%;
+  text-align: center;
   border: none;
   border-radius: 25px;
   cursor: pointer;
+  width: auto;
+  text-decoration: none !important;
 }
 .btn.communicate {
   color: #ffb45b;
@@ -13,6 +21,15 @@
 .btn:hover {
   transition: 0.5s;
   opacity: 0.5;
+}
+.btn.icon {
+  padding: 2px;
+  margin: 0 0 10px 0;
+  width: 100%;
+  justify-content: space-between;
+}
+.btn.icon span {
+  padding: 13px 26px;
 }
 
 /*# sourceMappingURL=Button.module.css.map */

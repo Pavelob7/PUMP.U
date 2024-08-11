@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../../public/styles/Form.module.scss';
+import styles from '../../../public/styles/Form.module.scss';
 
 interface StepProps {
     formData: {
@@ -34,6 +34,7 @@ const Step1: React.FC<StepProps> = ({ formData, setFormData, nextStep }) => {
 
     return (
         <div className={styles.container}>
+            <form>
             <h2>Шаг 1</h2>
             <label>
                 Email
@@ -111,6 +112,7 @@ const Step1: React.FC<StepProps> = ({ formData, setFormData, nextStep }) => {
             <div className={styles.navigationButtons}>
             <button onClick={nextStep}>Далее</button>
             </div>
+            </form>
         </div>
     );
 };

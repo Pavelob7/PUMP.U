@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import styles from '../../public/styles/Form.module.scss';
+import styles from '../../../public/styles/Form.module.scss';
 
 interface FormData {
     userHeight: number;

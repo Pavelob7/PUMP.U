@@ -1,20 +1,23 @@
 // components/SkipButton.tsx
-"use client"; // Указываем, что компонент является клиентским
+"use client";
 
 import React from 'react';
-import styles from '../../../public/styles/buttons/Button.module.scss'; // Скорректированный путь
+import styles from '../../../public/styles/buttons/Button.module.scss';
 
 type ButtonProps = {
-    onClick: () => void;
-    children: React.ReactNode;
+    onClick?: () => void;
+    children?: React.ReactNode;
+    icon?: boolean; // Новый пропс для определения наличия иконки
 };
 
-const SkipButton: React.FC<ButtonProps> = ({ onClick, children }) => {
+const Button: React.FC<ButtonProps> = ({ onClick, children, icon = false }) => {
+    const btnClass = icon ? `${styles.btn} ${styles.icon}` : `${styles.btn}`;
+
     return (
-        <button onClick={onClick} className={styles.btn}>
+        <button onClick={onClick} className={btnClass}>
             {children}
         </button>
     );
 };
 
-export default SkipButton;
+export default Button;

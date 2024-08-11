@@ -7,7 +7,6 @@ $third-family: "SF Pro Text", sans-serif;
 $font3: "Inter", sans-serif;
 $font4: "Actay", sans-serif;
 
-
 //  basic colors //
 $basic-col1: #4d4d4d;
 $basic-col2: #373737;
@@ -81,3 +80,49 @@ $balance-wh8: #aa96ee;
 $balance-wh9: #6ecbec;
 $balance-wh10: #00ff19;
 
+// MIXINS //
+
+// Миксины для заголовков
+@mixin heading-1 {
+  font-family: map-get($heading-1, font-family);
+  font-weight: map-get($heading-1, font-weight);
+  font-size: map-get($heading-1, font-size);
+}
+
+@mixin heading-2 {
+  font-family: map-get($heading-2, font-family);
+  font-weight: map-get($heading-2, font-weight);
+  font-size: map-get($heading-2, font-size);
+}
+
+@mixin heading-3 {
+  font-family: map-get($heading-3, font-family);
+  font-weight: map-get($heading-3, font-weight);
+  font-size: map-get($heading-3, font-size);
+}
+
+// Миксины для основного текста
+@mixin main-text-regular {
+  font-family: map-get($main-text-regular, font-family);
+  font-weight: map-get($main-text-regular, font-weight);
+  font-size: map-get($main-text-regular, font-size);
+}
+
+@mixin main-text-medium {
+  font-family: map-get($main-text-medium, font-family);
+  font-weight: map-get($main-text-medium, font-weight);
+  font-size: map-get($main-text-medium, font-size);
+}
+
+// Миксины для календаря
+@mixin calendar-text-semibold {
+  font-family: map-get($calendar-text-semibold, font-family);
+  font-weight: map-get($calendar-text-semibold, font-weight);
+  font-size: map-get($calendar-text-semibold, font-size);
+}
+
+@mixin calendar-text-bold {
+  font-family: map-get($calendar-text-bold, font-family);
+  font-weight: map-get($calendar-text-bold, font-weight);
+  font-size: map-get($calendar-text-bold, font-size);
+}

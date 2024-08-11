@@ -5,21 +5,40 @@ $text-color: #000000;
 $communicate-text-color: #ffb45b;
 
 .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 13px 26px;
+  margin: 20px 0;
   background-color: $base-color;
   color: $text-color;
+  line-height: 120%;
+  text-align: center;
   border: none;
   border-radius: 25px;
   cursor: pointer;
+  width: auto;
+  text-decoration: none !important;
 
 &.communicate {
   color: $communicate-text-color;
 }
 
-
   &:hover {
     transition: 0.5s;
     opacity: 0.5;
   }
+
+  &.icon {
+    padding: 2px;
+    margin: 0 0 10px 0;
+    width: 100%;
+    justify-content: space-between;
+
+    span {
+      padding: 13px 26px;
+    }
+  }
+
 }
 

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import styles from '../../public/styles/Form.module.scss';
+import styles from '../../../public/styles/Form.module.scss';
 
 interface FormData {
     goal: string[];
