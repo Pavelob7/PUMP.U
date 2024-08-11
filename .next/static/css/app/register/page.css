@@ -1,0 +1,207 @@
+/*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[13].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[13].oneOf[9].use[5]!./public/styles/Form.module.scss ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+@charset "UTF-8";
+.Form_container___g5IC {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  color: white;
+}
+.Form_container___g5IC h2 {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+}
+.Form_container___g5IC p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+.Form_container___g5IC input[type=range] {
+  width: 100%;
+  margin: 20px 0;
+}
+.Form_container___g5IC textarea {
+  width: 100%;
+  margin: 20px 0;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  background-color: #444;
+  color: white;
+}
+
+.Form_buttonsContainer__HqE_k, .Form_multiSelectContainer___lOap {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 20px 0;
+}
+.Form_buttonsContainer__HqE_k button, .Form_multiSelectContainer___lOap button {
+  padding: 15px 30px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 30px;
+  color: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  font-size: 1.2em;
+  background-color: transparent;
+  transition: color 0.3s ease;
+}
+.Form_buttonsContainer__HqE_k button:hover, .Form_multiSelectContainer___lOap button:hover {
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.6);
+}
+.Form_buttonsContainer__HqE_k button.Form_active__eLyhE, .Form_multiSelectContainer___lOap button.Form_active__eLyhE {
+  border: 1px solid rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
+}
+
+.Form_navigationButtons__bhScw {
+  display: flex;
+  gap: 15px;
+}
+.Form_navigationButtons__bhScw button {
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1.2em;
+  transition: background 0.3s ease;
+}
+.Form_navigationButtons__bhScw button:nth-child(1), .Form_navigationButtons__bhScw button:nth-child(2) {
+  padding: 12px 25px;
+  border: none;
+  background: #fff;
+  color: #000;
+}
+.Form_navigationButtons__bhScw button:nth-child(1):hover, .Form_navigationButtons__bhScw button:nth-child(2):hover {
+  background: rgba(255, 255, 255, 0.7);
+}
+.Form_navigationButtons__bhScw button:nth-child(1):disabled, .Form_navigationButtons__bhScw button:nth-child(2):disabled {
+  background: rgba(255, 255, 255, 0.5);
+  cursor: auto;
+}
+
+.Form_backBlock__oeQVJ {
+  display: flex;
+  width: 100%;
+}
+.Form_backBlock__oeQVJ .Form_backButton___UfrH {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.Form_inputField__TbciB {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid #666; /* Цвет границы */
+  border-radius: 8px; /* Скругление углов */
+  background-color: #444; /* Цвет фона */
+  color: white; /* Цвет текста */
+  margin: 10px 0; /* Отступы сверху и снизу */
+  box-sizing: border-box; /* Включение границы и паддинга в общую ширину элемента */
+}
+
+.Form_inputField__TbciB::placeholder {
+  color: #999; /* Цвет плейсхолдера */
+}
+
+/*  Стили для квадратных радио-кнопок */
+.Form_radioContainer__IJiNj {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.Form_radioContainer__IJiNj input[type=radio] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #fff; /* Белая граница по умолчанию */
+  border-radius: 4px; /* Скругление для создания квадрата */
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  margin-right: 10px;
+  transition: background 0.3s, border-color 0.3s;
+}
+.Form_radioContainer__IJiNj input[type=radio]:checked::after {
+  content: "";
+  position: absolute;
+  top: 50%; /* Центрирование по вертикали */
+  left: 50%; /* Центрирование по горизонтали */
+  transform: translate(-50%, -50%); /* Центрирование с помощью transform */
+  width: 13px; /* Ширина SVG */
+  height: 10px; /* Высота SVG */
+  background: url('data:image/svg+xml,%3Csvg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M11.3333 1.66663L4.66668 8.33329L1.33334 4.99996" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /%3E%3C/svg%3E') no-repeat center;
+  background-size: contain; /* Подгонка размера */
+}
+.Form_radioContainer__IJiNj label {
+  font-size: 1.2em;
+  color: white;
+  cursor: pointer;
+}
+
+/* Стили для ползунков */
+.Form_range-slider__DhWAc {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 5px;
+  background: #ddd;
+  outline: none;
+  opacity: 0.7;
+  transition: opacity 0.15s ease-in-out;
+  position: relative;
+}
+.Form_range-slider__DhWAc::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #666;
+  cursor: pointer;
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+}
+.Form_range-slider__DhWAc::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #666;
+  cursor: pointer;
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+}
+.Form_range-slider__DhWAc::-ms-thumb {
+  width: 20px;
+  height: 20px;
+  background: #666;
+  cursor: pointer;
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+}
+
+.Form_range-slider__DhWAc::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 5px;
+  background: #ddd;
+}
+
+.Form_range-slider__DhWAc::-moz-range-track {
+  width: 100%;
+  height: 5px;
+  background: #ddd;
+}
+
+.Form_range-slider__DhWAc::-ms-track {
+  width: 100%;
+  height: 5px;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
