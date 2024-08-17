@@ -102,23 +102,6 @@
   }
 }
 
-
-
-.inputField {
-  width: 100%;
-  padding: 15px;
-  border: 2px solid #666; /* Цвет границы */
-  border-radius: 8px; /* Скругление углов */
-  background-color: #444; /* Цвет фона */
-  color: white; /* Цвет текста */
-  margin: 10px 0; /* Отступы сверху и снизу */
-  box-sizing: border-box; /* Включение границы и паддинга в общую ширину элемента */
-}
-
-.inputField::placeholder {
-  color: #999; /* Цвет плейсхолдера */
-}
-
 /*  Стили для квадратных радио-кнопок */
 .radioContainer {
   display: flex;

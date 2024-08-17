@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import styles from '../../../public/styles/Form.module.scss';
 
-interface FormData {
+// Определите интерфейс для данных формы
+export interface FormData3 {
     userHeight: number;
     userWeight: number;
     userFatPercent: number;
@@ -18,31 +19,15 @@ interface FormData {
     workoutFrequency: string;
 }
 
-const initialFormData: FormData = {
-    userHeight: 0,
-    userWeight: 0,
-    userFatPercent: 0,
-    userDreamWeight: 0,
-    userDreamFatPercent: 0,
-    rangeActivity: 0,
-    rangePhysicalLevel: 0,
-    levelStraightBack: 0,
-    hobby: [],
-    issues: [],
-    workoutType: [],
-    healthLimitations: [],
-    workoutLevel: '',
-    workoutFrequency: ''
-};
-
 interface StepProps {
-    formData: FormData;
-    setFormData: React.Dispatch<React.SetStateAction<FormData>>;
+    formData: FormData3;
+    setFormData: React.Dispatch<React.SetStateAction<FormData3>>;
     nextStep: () => void;
     prevStep: () => void;
+    handleSubmit: () => void; // Обновите интерфейс, чтобы включить handleSubmit
 }
 
-const MultiFormStep3: React.FC<StepProps> = ({ formData, setFormData, nextStep, prevStep }) => {
+const MultiFormStep3: React.FC<StepProps> = ({ formData, setFormData, nextStep, prevStep, handleSubmit }) => {
     const [subStep, setSubStep] = useState(1);
     const [isNextDisabled, setIsNextDisabled] = useState(true);
 
@@ -51,7 +36,7 @@ const MultiFormStep3: React.FC<StepProps> = ({ formData, setFormData, nextStep, 
         setFormData({ ...formData, [name]: value });
     };
 
-    const handleMultiSelectChange = (option: string, name: keyof FormData) => {
+    const handleMultiSelectChange = (option: string, name: keyof FormData3) => {
         const selectedOptions = (formData[name] as string[]) || [];
         if (selectedOptions.includes(option)) {
             setFormData({ ...formData, [name]: selectedOptions.filter((item: string) => item !== option) });
@@ -60,7 +45,7 @@ const MultiFormStep3: React.FC<StepProps> = ({ formData, setFormData, nextStep, 
         }
     };
 
-    const handleSingleSelectChange = (option: string, name: keyof FormData) => {
+    const handleSingleSelectChange = (option: string, name: keyof FormData3) => {
         setFormData({ ...formData, [name]: option });
     };
 
@@ -111,7 +96,7 @@ const MultiFormStep3: React.FC<StepProps> = ({ formData, setFormData, nextStep, 
         }
     };
 
-    const handleRangeChange = (name: keyof FormData, value: number) => {
+    const handleRangeChange = (name: keyof FormData3, value: number) => {
         setFormData({ ...formData, [name]: value });
     };
 

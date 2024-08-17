@@ -1,0 +1,31 @@
+@charset "UTF-8";
+.inputFieldContainer {
+  position: relative;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.inputField {
+  width: 100%;
+  padding: 15px;
+  padding-right: 40px; /* Оставляем место для иконки */
+  border: 2px solid #666;
+  border-radius: 8px;
+  background-color: #444;
+  color: white;
+  margin: 10px 0;
+  box-sizing: border-box;
+}
+
+.togglePasswordVisibility {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*# sourceMappingURL=InputField.module.css.map */

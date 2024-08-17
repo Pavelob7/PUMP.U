@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styles from '../../../public/styles/Form.module.scss';
 
-interface FormData {
+export interface FormData2 {
     goal: string[];
     mainGoal: string;
     sleepQuality: number;
@@ -14,7 +14,7 @@ interface FormData {
     withCoach: string;
 }
 
-const initialFormData: FormData = {
+const initialFormData: FormData2 = {
     goal: [],
     mainGoal: '',
     sleepQuality: 0,
@@ -28,8 +28,8 @@ const initialFormData: FormData = {
 };
 
 interface StepProps {
-    formData: FormData;
-    setFormData: React.Dispatch<React.SetStateAction<FormData>>;
+    formData: FormData2;
+    setFormData: React.Dispatch<React.SetStateAction<FormData2>>;
     nextStep: () => void;
     prevStep: () => void;
 }
@@ -43,7 +43,7 @@ const MultiFormStep2: React.FC<StepProps> = ({ formData, setFormData, nextStep, 
         setFormData({ ...formData, [name]: value });
     };
 
-    const handleMultiSelectChange = (option: string, name: keyof FormData) => {
+    const handleMultiSelectChange = (option: string, name: keyof FormData2) => {
         const selectedOptions = formData[name] as string[] || [];
         if (selectedOptions.includes(option)) {
             setFormData({ ...formData, [name]: selectedOptions.filter((item: string) => item !== option) });
@@ -52,7 +52,7 @@ const MultiFormStep2: React.FC<StepProps> = ({ formData, setFormData, nextStep, 
         }
     };
 
-    const handleSingleSelectChange = (option: string, name: keyof FormData) => {
+    const handleSingleSelectChange = (option: string, name: keyof FormData2) => {
         setFormData({ ...formData, [name]: option });
     };
 
@@ -96,7 +96,7 @@ const MultiFormStep2: React.FC<StepProps> = ({ formData, setFormData, nextStep, 
         }
     };
 
-    const handleRangeChange = (name: keyof FormData, value: number) => {
+    const handleRangeChange = (name: keyof FormData2, value: number) => {
         setFormData({ ...formData, [name]: value });
     };
 
