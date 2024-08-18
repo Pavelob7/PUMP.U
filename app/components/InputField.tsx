@@ -2,23 +2,21 @@ import React, { useState } from "react";
 import styles from "../../public/styles/InputField.module.scss";
 
 interface InputFieldProps {
-    type: "text" | "email" | "password";
+    type: "text" | "email" | "password" | "date" | "tel";
     placeholder?: string;
     value?: string;
-    onChange: (value: string) => void;
+    name: string;  // Добавлено свойство name
+    onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;  // Обновлен тип onChange
 }
 
 const InputField: React.FC<InputFieldProps> = ({
                                                    type,
                                                    placeholder,
                                                    value,
+                                                   name,  // Обработаем свойство name
                                                    onChange,
                                                }) => {
     const [passwordVisible, setPasswordVisible] = useState(false);
-
-    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        onChange(e.target.value);
-    };
 
     const togglePasswordVisibility = () => {
         setPasswordVisible(!passwordVisible);
@@ -31,7 +29,8 @@ const InputField: React.FC<InputFieldProps> = ({
                 type={type === "password" && passwordVisible ? "text" : type}
                 placeholder={placeholder}
                 value={value}
-                onChange={handleInputChange}
+                name={name}  // Установим name на инпут
+                onChange={onChange}  // Используем e => onChange(e)
             />
             {type === "password" && (
                 <span

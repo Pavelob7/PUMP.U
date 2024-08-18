@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from '../../../public/styles/Form.module.scss';
+import InputField from '../InputField';
 
 // Определяем интерфейс для данных формы
 export interface FormData1 {
@@ -12,17 +13,21 @@ export interface FormData1 {
     gender: string;
 }
 
+// Интерфейс для свойств компонента Step1
 interface StepProps {
     formData: FormData1;
     setFormData: React.Dispatch<React.SetStateAction<FormData1>>;
     nextStep: () => void;
 }
 
+// Компонент Step1
 const Step1: React.FC<StepProps> = ({ formData, setFormData, nextStep }) => {
+    // Обработчик изменений для всех инпутов
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
+    // Обработчик изменений для выбора пола
     const handleGenderChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setFormData({ ...formData, gender: e.target.value });
     };
@@ -30,59 +35,53 @@ const Step1: React.FC<StepProps> = ({ formData, setFormData, nextStep }) => {
     return (
         <div className={styles.container}>
             <form>
-                <h2>Шаг 1</h2>
                 <label>
                     Email
-                    <input
+                    <InputField
                         type="email"
                         name="email"
                         value={formData.email}
                         onChange={handleChange}
-                        className={styles.inputField}
                     />
                 </label>
                 <label>
                     Пароль
-                    <input
+                    <InputField
                         type="password"
                         name="password"
                         value={formData.password}
                         onChange={handleChange}
-                        className={styles.inputField}
                     />
                 </label>
                 <label>
                     Имя
-                    <input
+                    <InputField
                         type="text"
                         name="name"
                         value={formData.name}
                         onChange={handleChange}
-                        className={styles.inputField}
                     />
                 </label>
                 <label>
                     Дата рождения
-                    <input
+                    <InputField
                         type="date"
                         name="birthdate"
                         value={formData.birthdate}
                         onChange={handleChange}
-                        className={styles.inputField}
                     />
                 </label>
                 <label>
                     Телефон
-                    <input
+                    <InputField
                         type="tel"
                         name="phone"
                         value={formData.phone}
                         onChange={handleChange}
-                        className={styles.inputField}
                     />
                 </label>
                 <label>
-                    Пол
+                    Выберите пол
                     <div className={styles.radioContainer}>
                         <label>
                             <input
