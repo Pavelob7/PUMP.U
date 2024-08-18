@@ -1,4 +1,3 @@
-//app/page/page.tsx
 "use client";
 
 import React, { useState } from 'react';
@@ -6,32 +5,45 @@ import styles from '../../public/styles/Form.module.scss';
 import Button from '../components/buttons/Button';
 import InputField from "../components/InputField";
 
-
 const Authorization: React.FC = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+
+    // Обработчик изменения email
+    const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setEmail(e.target.value);
+    };
+
+    // Обработчик изменения пароля
+    const handlePasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setPassword(e.target.value);
+    };
 
     return (
         <div className={styles.container}>
             <form className={styles.form}>
                 <div className="flex-column">
-                    <label>Логин</label></div>
+                    <label>Логин</label>
+                </div>
                 <div className="inputForm">
                     <InputField
+                        name="email"
                         type="email"
                         placeholder="admin@gmail.com"
                         value={email}
-                        onChange={setEmail}
+                        onChange={handleEmailChange}
                     />
                 </div>
 
                 <div className="flex-column">
-                    <label>Пароль</label></div>
+                    <label>Пароль</label>
+                </div>
                 <div className="inputForm">
                     <InputField
+                        name="password"
                         type="password"
                         value={password}
-                        onChange={setPassword}
+                        onChange={handlePasswordChange}
                     />
                 </div>
 
